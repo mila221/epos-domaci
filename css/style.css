@@ -1,0 +1,293 @@
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: tomato;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.slika {
+  background-image: url("../assets/pozadina.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.vh {
+  height: 100vh;
+}
+.meni {
+  height: 70px;
+  width: 100%;
+  background-color: brown;
+  position: relative;
+  z-index: 800;
+}
+.desktop {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.desktop li {
+  display: inline-block;
+}
+.desktop li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 25px 40px;
+  font-weight: bold;
+}
+.desktop li a:hover {
+  background-color: rgb(223, 188, 112);
+  transition: 0.25s;
+}
+.logo {
+  display: inline-block;
+  width: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.logo img {
+  top: 9px;
+  position: relative;
+}
+.logo span {
+  color: white;
+  font-weight: bold;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+.telefon-ikonica {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  display: none;
+}
+.telefon-lista {
+  list-style: none;
+  background-color: brown;
+  padding: 0;
+  position: relative;
+  z-index: 999;
+}
+.telefon-meni {
+  height: 600px;
+  overflow-y: hidden;
+  top: -600px;
+  position: relative;
+}
+.telefon-lista a {
+  text-decoration: none;
+  color: white;
+  padding: 30px 0px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.telefon-meni.expanded {
+  top: 50px;
+  transition: 0.3s;
+}
+.glavni-naslov {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  background-color: tomato;
+}
+h1 {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+.onama-cont {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 200px;
+  margin: 30px 0px;
+}
+.onama-cont.reverse {
+  flex-direction: row-reverse;
+}
+p {
+  color: white;
+}
+.onama-cont p {
+  padding-left: 20px;
+}
+#kontakt {
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+}
+.rezervisi {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  background-color: wheat;
+  padding: 20px;
+}
+.dekorac {
+  margin-top: 20px;
+}
+.bottom {
+  margin-bottom: 20px;
+}
+.posalji {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.email {
+  margin-bottom: 20px;
+  height: 40px;
+}
+.cenovnik {
+  top: 100px;
+  position: absolute;
+  width: 100%;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: white;
+}
+.flex-cont {
+  top: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.img1,
+.img2 {
+  background-color: white;
+  cursor: pointer;
+}
+.img2 {
+  margin-left: 20px;
+}
+.flex-cont div {
+  width: 300px;
+  height: 360px;
+}
+.flex-cont img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+}
+h3 {
+  text-align: center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#hrana,
+#pice {
+  display: none;
+}
+.fotorama {
+  position: absolute;
+  top: 100px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fotorama img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+#rezervisi {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .desktop li a {
+    padding: 25px 15px;
+  }
+  .meni {
+    position: fixed;
+    top: 0;
+  }
+}
+@media (max-width: 800px) {
+  .desktop {
+    display: none;
+  }
+  .telefon-ikonica {
+    display: block;
+  }
+  .glavni-naslov {
+    font-size: 40px;
+  }
+  .onama-cont,
+  .onama-cont.reverse {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .onama-cont img {
+    margin: 0 auto;
+  }
+  .flex-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img2 {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  table {
+    width: 90%;
+    margin-top: 500px;
+  }
+  .fotorama {
+    width: 90%;
+  }
+  .rezervisi {
+    width: 90%;
+  }
+}

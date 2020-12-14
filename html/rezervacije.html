@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forrest | Rezervacije</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/js.js"></script>
+</head>
+<body>
+        <div class="meni">
+            <div class="logo">
+                <img width="30" src="../assets/logo.png" alt="">
+                <span>Forrest</span>
+             </div>
+            <ul class="desktop">
+                <li> <a href="../index.html">Pocetna</a> </li>
+                <li> <a href="../index.html#onama">O nama</a> </li>
+                <li> <a href="../index.html#kontakt">Kontakt</a> </li>
+                <li> <a href="./cenovnik.html">Cenovnik</a> </li>
+                <li> <a href="./galerija.html">Galerija</a> </li>
+                <li> <a href="./rezervacije.html">Rezervacije</a> </li>
+            </ul>
+            <div class="telefon-ikonica">
+                <img src="../assets/meni.png" alt="">
+            </div>
+        </div>
+
+        <div class="telefon-meni">
+            <ul class="telefon-lista">
+                <li> <a href="../index.html">Pocetna</a> </li>
+                <li> <a href="../index.html#onama">O nama</a> </li>
+                <li> <a href="../index.html#kontakt">Kontakt</a> </li>
+                <li> <a href="./cenovnik.html">Cenovnik</a> </li>
+                <li> <a href="./galerija.html">Galerija</a> </li>
+                <li> <a href="./rezervacije.html">Rezervacije</a> </li>
+            </ul>
+        </div>
+        <div id="rezervisi">
+            <h1>Rezervisi</h1>
+                <form  onsubmit="return validateForm()" id="rez" class="rezervisi" action="">
+                    <input required placeholder="Email" class="email" type="email" name="" id="">
+                    <input required placeholder="Ime i prezime" class="email" type="text" name="ime" id="">
+                    <input required placeholder="Br. telefona" class="email" type="text" name="broj" id="">
+
+                    <label  for="sto">Broj ljudi</label>
+
+                        <select required name="sto" id="sto">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="6-10">6-10</option>
+                        </select>
+                        <div class="dekorac">Zelite dekoracije?</div>
+                        <div class="bottom">
+                        <input required type="radio" id="da" name="dekor" value="Da">DA
+                    
+                        <input required type="radio" id="ne" name="dekor" value="Ne">NE
+                        </div>
+                    
+                    <textarea placeholder="Napomena" rows="5" cols="50"></textarea>
+                    <input class="posalji" type="submit" value="Posalji">
+                    <input class="posalji" type="reset" value="Resetuj">
+
+                </form>
+            </div>
+
+</body>
+</html>
